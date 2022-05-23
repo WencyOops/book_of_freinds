@@ -1,0 +1,39 @@
+div.head {
+  display: flex;
+  background-color: rgb(164, 208, 98);
+  margin-top: 5px;
+  width: 400px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &:hover {
+    border: none;
+    background:
+      linear-gradient(90deg, rgb(92, 13, 13), 50%, transparent 0) repeat-x,
+      linear-gradient(90deg, rgb(92, 13, 13) 50%, transparent 0) repeat-x,
+      linear-gradient(0deg, rgb(92, 13, 13) 50%, transparent 0) repeat-y,
+      linear-gradient(0deg, rgb(92, 13, 13) 50%, transparent 0) repeat-y;
+    background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-color: orange;
+    animation: linearGradientMove .5s infinite linear;
+  }
+
+  ;
+}
+
+div.user-list {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+  font-weight: 700;
+  display: flex;
+}
+
+@keyframes linearGradientMove {
+  100% {
+    background-position: 10px 0, -10px 100%, 0 -10px, 100% 10px;
+  }
+}
