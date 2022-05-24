@@ -1,24 +1,13 @@
-# book_of_friends_vue
+## Quick Start
 
-## Project setup
-```
+#### 1. 安装项目所需依赖
+
+```shell
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+### 2. 本地启动项目
+```shell
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
