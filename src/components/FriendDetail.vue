@@ -6,12 +6,6 @@
           <button @click="onReturn">一覧に戻る</button>
         </th>
         <th>
-          <button>保存</button>
-        </th>
-        <th>
-          <button @click="onDelete(localCurrentIndex)">削除</button>
-        </th>
-        <th>
           <button class="prev" @click="onTurnPage(-1)">前</button>
         </th>
         <th>
@@ -76,7 +70,6 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   name: "FriendDetail",
   props: {
@@ -97,22 +90,7 @@ export default {
       if (targetIndex >= 0 && targetIndex <= this.tableData.length - 1) {
         this.localCurrentIndex = targetIndex;
       }
-    },
-    onDelete: function (index) {
-      this.$confirm({
-        title: "確認",
-        content: "削除を確認しますか？",
-      })
-        .then(() => {
-          let uid = this.tableData[index].uid;
-          axios.delete("http://localhost:8081/users/" + uid).then(() => {
-            console.log("success");
-          });
-        })
-        .catch(() => {
-          console.log("cancel");
-        });
-    },
-  },
+    }
+  }
 };
 </script>

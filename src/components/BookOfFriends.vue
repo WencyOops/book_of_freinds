@@ -1,19 +1,17 @@
 <template>
   <div class="frame">
     <div class="child">
-      <transition mode="out-in" appear>
-        <FriendList
-          @showUserDetailWithIndex="showUserDetail"
-          v-if="showList"
-          :tableData="tableData"
-        />
-        <FriendDetail
-          @showList="switchToList"
-          v-else
-          :tableData="tableData"
-          :currentIndex="currentIndex"
-        />
-      </transition>
+      <FriendList
+        @showUserDetailWithIndex="showUserDetail"
+        v-if="showList"
+        :tableData="tableData"
+      />
+      <FriendDetail
+        @showList="switchToList"
+        v-else
+        :tableData="tableData"
+        :currentIndex="currentIndex"
+      />
 
     </div>
   </div>
